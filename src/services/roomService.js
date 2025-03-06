@@ -1,9 +1,11 @@
-const Room = require('../models/roomModel');
+const RoomService = require('../services/roomService');
 
-const rooms = {};  // In-memory storage (replace with Redis later)
+exports.createRoom = (req, res) => {
+    const roomId = RoomService.createRoom();
+    res.json({ roomId });
+};
 
-exports.createRoom = () => {
-    const roomId = Math.random().toString(36).substr(2, 9);
-    rooms[roomId] = new Room(roomId);
-    return roomId;
+// ✅ Add this function to fix the error
+exports.getRooms = (req, res) => {
+    res.json({ message: "Fetching all rooms (not yet implemented)" });
 };
