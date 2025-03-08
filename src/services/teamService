@@ -1,0 +1,20 @@
+exports.createTeam = (req, res) => {
+    const teamId = crypto.randomUUID()
+    res.json({ teamId });
+};
+
+exports.getTeam = (req, res) => {
+    res.json({ message: `Fetching team ${req.TeamId} (not yet implemented)` });
+};
+
+exports.getTeamsByUser = (req, res) => {
+    res.json({ message: `Fetching all teans for user ${req.UserId} (not yet implemented)` });
+};
+
+exports.joinTeam = (req, res) => {
+    res.json({ message: `User ${req.UserId} to join team ${req.RoomId} (not yet implemented)` });
+};
+
+exports.leaveTeam = (req, res) => {
+    res.json({ message: `User ${req.UserId} being removed from team ${req.TeamId} (not yet implemented)` });
+};

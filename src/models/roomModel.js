@@ -3,6 +3,8 @@ class Room {
         this.id = id;
         this.users = {};
         this.votes = {};
+        this.voteOptions = {};
+        this.teamId = undefined;
     }
 }
 
